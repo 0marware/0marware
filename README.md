@@ -1,4 +1,4 @@
-<h4 align="left">🖥️Self taught web developer<br>🖥️Full-Stack Developer<br>🎮 FiveM resource Developer<br>👨‍💼 Co-founder of: https://nanoscripts.tebex.io/</h4>
+<h4 align="left">🖥️Full-Stack Developer<br>🎮 FiveM resource Developer<br>👨‍💼 Co-founder of: https://nanoscripts.tebex.io/</h4>
 
 ###
 
