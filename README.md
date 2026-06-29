@@ -73,10 +73,6 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=0marware&bg_color=00000000&hide_border=true&color=58A6FF&line=58A6FF&point=c9d1d9&area=true&area_color=58A6FF" alt="Contribution activity graph" width="95%">
 </p>
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=0marware&theme=flat&no-frame=true&no-bg=true&column=7&margin-w=4&margin-h=4" alt="Trophies">
-</p>
-
 ---
 
 ### 🚀 Featured Projects — NANO Scripts
