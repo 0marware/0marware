@@ -1,14 +1,3 @@
-<!--
-  GitHub profile README for @0marware
-  Place this file at the root of your special repo:  github.com/0marware/0marware  ->  README.md
-  Cards use transparent backgrounds (bg_color=00000000) so they adapt to GitHub light & dark mode.
-
-  Stats + language cards are served from your own private-aware instance:
-  https://github-readme-stats-5xfc.vercel.app  (counts your private repos).
-  Tip: also enable GitHub > Settings > Public profile > "Include private contributions on my profile"
-  so the streak/activity graphs reflect private work too.
--->
-
 <h1 align="center">Hi, I'm Omar 👋</h1>
 
 <p align="center">
@@ -25,7 +14,7 @@
 
 ### 🧑‍💻 About me
 
-- 👨‍💼 Co-Founder & developer at **[NANO Scripts](https://nanoscripts.tebex.io/)** — premium **FiveM** roleplay resources for **QBCore** & **ESX** communities.
+- 👨‍💼 Co-Founder & developer at **[NANO Scripts](https://nanoscripts.tebex.io/)** — premium **FiveM** roleplay resources for **QBCore** & **QBox** & **ESX** communities.
 - 🎮 I build immersive gameplay systems: heists, surveillance, HUDs, job & gang frameworks, and the tooling around them.
 - 🧠 Primarily **Lua** for in-game resources, with **TypeScript** for panels, tooling & integrations.
 - 🎓 Background in **Software Engineering (ALX)** — from low-level **C** and systems/DevOps to full-stack web.
