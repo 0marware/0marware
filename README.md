@@ -66,7 +66,7 @@
 </p>
 
 <p align="center">
-  <img height="195" src="https://github-readme-stats-5xfc.vercel.app/api/top-langs/?username=0marware&layout=donut&hide_border=true&langs_count=8&bg_color=00000000&title_color=58A6FF&text_color=8b949e&icon_color=58A6FF" alt="Most used languages">
+  <img width="470" src="languages.svg" alt="Most used languages">
 </p>
 
 <p align="center">
@@ -77,19 +77,11 @@
 
 ### 🚀 Featured Work — NANO Scripts
 
-> Premium FiveM systems I design & maintain. All source is **private / closed-source** — these run on live roleplay communities and are available through the [store](https://nanoscripts.tebex.io/).
+> Premium FiveM systems I design & maintain — all **private / closed-source**, available through the [store](https://nanoscripts.tebex.io/).
 
-| Area | What I build | Stack | Source |
-| :-- | :-- | :-- | :--: |
-| 🎯 Heist systems | Node-based, no-code editors for custom multi-stage heists | Lua | 🔒 Private |
-| 🕵️ Surveillance | Spy cameras & planted mics with a live in-game tablet | Lua | 🔒 Private |
-| 🧭 HUD & UI | Customizable HUDs, minimaps & status components | Lua | 🔒 Private |
-| 👮 Jobs & policing | Policing tools, job heists & gang systems for RP servers | TypeScript / Lua | 🔒 Private |
-| 🧰 Management tools | Boss menus & evidence-locker systems | TypeScript | 🔒 Private |
-
-**Open source**
-
-- 🌉 **[community_bridge](https://github.com/0marware/community_bridge)** — a modular FiveM integration layer unifying QBCore, ESX, targets, locks, fuel & clothing behind one API. *(Lua · GPLv3)*
+| Project | What it does | Stack | Source |
+| :--: | :--: | :--: | :--: |
+| 🔒 Private | Private | Private | Private |
 
 ---
 
