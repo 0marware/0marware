@@ -66,7 +66,7 @@
 </p>
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats-5xfc.vercel.app/api/top-langs/?username=0marware&layout=compact&hide_border=true&langs_count=8&bg_color=00000000&title_color=58A6FF&text_color=8b949e" alt="Most used languages">
+  <img height="195" src="https://github-readme-stats-5xfc.vercel.app/api/top-langs/?username=0marware&layout=donut&hide_border=true&langs_count=8&bg_color=00000000&title_color=58A6FF&text_color=8b949e&icon_color=58A6FF" alt="Most used languages">
 </p>
 
 <p align="center">
@@ -75,17 +75,17 @@
 
 ---
 
-### 🚀 Featured Projects — NANO Scripts
+### 🚀 Featured Work — NANO Scripts
 
-> Production FiveM resources I build & maintain (source is private — available on the [store](https://nanoscripts.tebex.io/)).
+> Premium FiveM systems I design & maintain. All source is **private / closed-source** — these run on live roleplay communities and are available through the [store](https://nanoscripts.tebex.io/).
 
-| Project | What it does | Stack |
-| :-- | :-- | :-- |
-| 🎯 **Heist Creator** (`nn_heistcreator`) | Node-based, no-code editor to design custom multi-stage heists | Lua |
-| 🕵️ **Spy System** (`nn-spysystem`) | Surveillance cameras & planted microphones with a live spy tablet | Lua |
-| 🧭 **Advanced HUD** (`nn-hud`) | Fully customizable HUD, minimap & status components | Lua |
-| 👮 **Police Suite** (`nn_police`, `nn-jobheist`, `pd_gangsystem`) | Policing, job heists & gang systems for RP servers | TypeScript / Lua |
-| 🧰 **Boss Menu & Evidence** (`nn-bossmenu`, `nn_evidence`) | Job management menus and an evidence-locker system | TypeScript |
+| Area | What I build | Stack | Source |
+| :-- | :-- | :-- | :--: |
+| 🎯 Heist systems | Node-based, no-code editors for custom multi-stage heists | Lua | 🔒 Private |
+| 🕵️ Surveillance | Spy cameras & planted mics with a live in-game tablet | Lua | 🔒 Private |
+| 🧭 HUD & UI | Customizable HUDs, minimaps & status components | Lua | 🔒 Private |
+| 👮 Jobs & policing | Policing tools, job heists & gang systems for RP servers | TypeScript / Lua | 🔒 Private |
+| 🧰 Management tools | Boss menus & evidence-locker systems | TypeScript | 🔒 Private |
 
 **Open source**
 
