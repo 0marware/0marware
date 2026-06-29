@@ -1,3 +1,18 @@
+<!--
+  GitHub profile README for @0marware
+  Place this file at the root of your special repo:  github.com/0marware/0marware  ->  README.md
+  Cards use transparent backgrounds (bg_color=00000000) so they adapt to GitHub light & dark mode.
+
+  Stats + language cards are served from your own private-aware instance:
+  https://github-readme-stats-5xfc.vercel.app  (counts your private repos).
+  Tip: also enable GitHub > Settings > Public profile > "Include private contributions on my profile"
+  so the streak/activity graphs reflect private work too.
+-->
+
+<p align="center">
+  <img src="nano-logo.png" width="140" alt="NANO Scripts">
+</p>
+
 <h1 align="center">Hi, I'm Omar 👋</h1>
 
 <p align="center">
@@ -14,7 +29,7 @@
 
 ### 🧑‍💻 About me
 
-- 👨‍💼 Co-Founder & developer at **[NANO Scripts](https://nanoscripts.tebex.io/)** — premium **FiveM** roleplay resources for **QBCore** & **QBox** & **ESX** communities.
+- 👨‍💼 Co-Founder & developer at **[NANO Scripts](https://nanoscripts.tebex.io/)** — premium **FiveM** roleplay resources for **QBCore**, **QBox** & **ESX** communities.
 - 🎮 I build immersive gameplay systems: heists, surveillance, HUDs, job & gang frameworks, and the tooling around them.
 - 🧠 Primarily **Lua** for in-game resources, with **TypeScript** for panels, tooling & integrations.
 - 🎓 Background in **Software Engineering (ALX)** — from low-level **C** and systems/DevOps to full-stack web.
@@ -39,6 +54,7 @@
 
 ![FiveM](https://img.shields.io/badge/FiveM-F40552?style=for-the-badge&logo=fivem&logoColor=white)
 ![QBCore](https://img.shields.io/badge/QBCore-1D2A48?style=for-the-badge&logoColor=white)
+![QBox](https://img.shields.io/badge/QBox-2D7D6F?style=for-the-badge&logoColor=white)
 ![ESX](https://img.shields.io/badge/ESX-2B2B2B?style=for-the-badge&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
