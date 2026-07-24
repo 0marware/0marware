@@ -102,33 +102,34 @@ def fetch_contributions():
     if not daily:
         return 2847, 41, 96, [3,4,5,4,6,7,9,8,7,9,8,6,7,8,10,9]
 
+    today = datetime.date.today()
+    one = datetime.timedelta(days=1)
     dates = sorted(daily)
     d0 = datetime.date.fromisoformat(dates[0])
-    d1 = datetime.date.fromisoformat(dates[-1])
-    # dense day list
+    d1 = min(datetime.date.fromisoformat(dates[-1]), today)   # ignore GitHub's future-padded empty days
+    # dense day list, real days only (up to today)
     series = []
     cur = d0
-    one = datetime.timedelta(days=1)
     while cur <= d1:
         series.append((cur, daily.get(cur.isoformat(), 0)))
         cur += one
 
     total_year = sum(c for d, c in series if d.year == this_year)
 
-    # longest streak
+    # longest streak (any run of consecutive days with contributions)
     longest = run = 0
     for _, c in series:
         run = run + 1 if c > 0 else 0
         longest = max(longest, run)
 
-    # current streak (today may legitimately be 0 and not break the streak)
+    # current streak: consecutive days ending today (today=0 just means not yet, don't break)
     current = 0
-    i = len(series) - 1
-    if i >= 0 and series[i][1] == 0:
-        i -= 1  # skip today if empty
-    while i >= 0 and series[i][1] > 0:
+    d = today
+    if daily.get(d.isoformat(), 0) == 0:
+        d = d - one
+    while daily.get(d.isoformat(), 0) > 0:
         current += 1
-        i -= 1
+        d = d - one
 
     # sparkline: last 16 weeks (sum per 7-day bucket)
     last = [c for _, c in series][-112:]
