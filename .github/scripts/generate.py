@@ -170,17 +170,20 @@ def build_svg(art_lines, langs, total, current, longest, spark):
     px=PX; y=AY
     s.append(T(px,y,f'<tspan fill="{G}" font-weight="700">0marware</tspan>',size=17)); y+=12
     s.append(T(px,y,f'<tspan fill="{G_DIM}">{esc("─"*38)}</tspan>',size=12)); y+=26
-    for k,v in [("role","full-stack developer"),("focus","fivem · roleplay systems"),("team","co-founder @ nano scripts")]:
+    for k,v in [("role","full-stack developer"),("focus","fivem · roleplay systems"),("team","co-founder/ceo @ nano scripts")]:
         s.append(T(px,y,f'<tspan fill="{G_LABEL}">{k:<7}</tspan><tspan fill="{G_MID}">{esc(v)}</tspan>')); y+=20
     y+=14
     s.append(T(px,y,"LANGUAGES",size=10.5,fill=G_LABEL,weight="700",ls=2.2)); y+=22
-    BARN=20
+    BARN=16; BLK=" ▏▎▍▌▋▊▉█"
     for name,pct in langs:
-        f=max(1 if pct>0 else 0, round(pct/100*BARN)); f=min(f,BARN)
+        exact=pct/100*BARN; full=int(exact); lvl=round((exact-full)*8)
+        part=BLK[lvl] if (full<BARN and lvl>0) else ""
+        filled="█"*full+part; empty="░"*(BARN-len(filled))
         s.append(T(px,y,(f'<tspan fill="{G_MID}">{name[:11]:<11}</tspan>'
-                         f'<tspan fill="{G}">{"█"*f}</tspan>'
-                         f'<tspan fill="{G_DIM}">{"░"*(BARN-f)}</tspan>'
-                         f'<tspan fill="{G_LABEL}">  {pct:>2}%</tspan>'))); y+=20
+                         f'<tspan fill="{G_LABEL}">[</tspan>'
+                         f'<tspan fill="{G}">{filled}</tspan>'
+                         f'<tspan fill="{G_DIM}">{empty}</tspan>'
+                         f'<tspan fill="{G_LABEL}">]  {pct:>2}%</tspan>'))); y+=20
     y+=16
     s.append(T(px,y,"CONTRIBUTIONS",size=10.5,fill=G_LABEL,weight="700",ls=2.2)); y+=24
     s.append(T(px,y,f'<tspan fill="{G_LABEL}">total     </tspan><tspan fill="{G}" font-weight="800" font-size="17">{total:,}</tspan><tspan fill="{G_LABEL}" font-size="11">  this year</tspan>')); y+=22
@@ -189,10 +192,6 @@ def build_svg(art_lines, langs, total, current, longest, spark):
     s.append(T(px,y,f'<tspan fill="{G_LABEL}">activity  </tspan><tspan fill="{G}">{sp}</tspan>')); y+=22
     s.append(T(px,y,f'<tspan fill="{G_LABEL}">current   </tspan><tspan fill="{G_LIGHT}" font-weight="700">{current}</tspan><tspan fill="{G_MID}"> days</tspan> <tspan font-size="12">🔥</tspan>')); y+=20
     s.append(T(px,y,f'<tspan fill="{G_LABEL}">longest   </tspan><tspan fill="{G_LIGHT}" font-weight="700">{longest}</tspan><tspan fill="{G_MID}"> days</tspan>'))
-    fy=H-14
-    s.append(f'<circle cx="{px+5}" cy="{fy-4}" r="4" fill="{G}"/>')
-    s.append(T(px+16,fy,f'<tspan fill="{G_LABEL}">auto-updated every 6h</tspan>',size=10.5))
-    s.append(T(W-14,fy,f'<tspan fill="{G}">↻ live</tspan>',size=10.5,anchor="end"))
     s.append('</svg>')
     return "\n".join(s)
 
