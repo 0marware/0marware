@@ -33,19 +33,21 @@ def rest(path):
 def graphql(query, variables):
     return _req("https://api.github.com/graphql", {"query": query, "variables": variables})
 
-# ---------------- languages (public repos, owner, non-fork) ----------------
+# ---------------- languages (owner repos incl. private, non-fork) ----------------
 def fetch_languages(top=5):
     totals = {}
     page = 1
     try:
         while True:
-            repos = rest(f"/users/{USER}/repos?per_page=100&page={page}&type=owner&sort=pushed")
+            # /user/repos (authenticated) includes PRIVATE repos the token can see;
+            # needs a token with the classic "repo" scope. Falls back to public only otherwise.
+            repos = rest(f"/user/repos?per_page=100&page={page}&affiliation=owner&sort=pushed")
             if not repos: break
             for r in repos:
                 if r.get("fork"): continue
                 if r.get("name","").lower() == USER.lower(): continue  # skip the profile repo
                 try:
-                    langs = rest(f"/repos/{USER}/{r['name']}/languages")
+                    langs = rest(f"/repos/{r['full_name']}/languages")
                 except Exception:
                     continue
                 for k, v in langs.items():
