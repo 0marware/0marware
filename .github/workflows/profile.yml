@@ -1,0 +1,47 @@
+name: Update profile
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'      # every 6 hours (UTC) — 00:00, 06:00, 12:00, 18:00
+  workflow_dispatch:            # lets you run it manually from the Actions tab
+  push:
+    branches: [ master ]
+    paths-ignore:
+      - 'profile.svg'           # avoid the bot's own commit re-triggering the run
+
+permissions:
+  contents: write               # allow the workflow to commit the refreshed SVG
+
+concurrency:
+  group: profile-update
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate profile.svg
+        env:
+          USERNAME: 0marware
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}   # classic PAT, scope read:user (see SETUP.md)
+        run: python .github/scripts/generate.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile.svg
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: refresh profile stats [skip ci]"
+            git push
+          fi
